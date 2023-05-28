@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Projekt.Data.Data.CMS.ONas>
+
+<!-- about section -->
+<section class="about_section layout_padding">
+    <div class="container  ">
+
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="img-box">
+                    <img src="~/lib/bootstrap/dist/images/about-img.png" alt="">
+                </div>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6">
+                    <div class="detail-box">
+                        <div class="heading_container">
+                            <h2>
+                                @item.Tytul
+                            </h2>
+                        </div>
+                        <p>
+                            @item.Tresc
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</section>
+<!-- end about section -->

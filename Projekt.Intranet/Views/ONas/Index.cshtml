@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Projekt.Data.Data.CMS.ONas>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>O nas</h1>
+<p>
+    <a asp-action="Create" class="mdc-button mdc-button--unelevated filled-button--success mdc-ripple-upgraded" style="--mdc-ripple-fg-size:56px; --mdc-ripple-fg-scale:1.96952; --mdc-ripple-fg-translate-start:32.3906px, -14px; --mdc-ripple-fg-translate-end:18.8047px, -10px;">Dodaj nową</a>
+</p>
+<div class="mdc-card p-0">
+    <h6 class="card-title card-padding pb-0">O nas</h6>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Tytul)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Tresc)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tytul)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tresc)
+                        </td>
+                        <td>
+                            <button class="mdc-button mdc-button--unelevated filled-button--warning mdc-ripple-upgraded" style="--mdc-ripple-fg-size:55px; --mdc-ripple-fg-scale:1.98546; --mdc-ripple-fg-translate-start:26.5px, -4.5px; --mdc-ripple-fg-translate-end:18.7188px, -9.5px;">
+
+                                <i class="material-icons mdc-button__icon">colorize</i>
+                                <a asp-action="Edit" asp-route-id="@item.IdONas" class="mdc-button mdc-button--unelevated filled-button--warning mdc-ripple-upgraded">Edytuj</a>
+
+                            </button>
+
+                            <a asp-action="Details" asp-route-id="@item.IdONas" class="mdc-button mdc-button--unelevated filled-button--success mdc-ripple-upgraded">Szczegóły</a>
+
+                            <button class="mdc-button mdc-button--unelevated filled-button--secondary mdc-ripple-upgraded" style="--mdc-ripple-fg-size:65px; --mdc-ripple-fg-scale:1.92922; --mdc-ripple-fg-translate-start:22.5px, -15.5px; --mdc-ripple-fg-translate-end:22.3203px, -14.5px;">
+                                <i class="material-icons mdc-button__icon">delete</i>
+                                <a asp-action="Delete" asp-route-id="@item.IdONas" class="mdc-button mdc-button--unelevated filled-button--secondary mdc-ripple-upgraded">Delete</a>
+
+                            </button>
+
+
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Projekt.Data.Data.Sklep.Danie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Danie</h1>
+
+<p>
+    <a asp-action="Create" class="mdc-button mdc-button--unelevated filled-button--success mdc-ripple-upgraded" style="--mdc-ripple-fg-size:56px; --mdc-ripple-fg-scale:1.96952; --mdc-ripple-fg-translate-start:32.3906px, -14px; --mdc-ripple-fg-translate-end:18.8047px, -10px;">Dodaj nową</a>
+</p>
+<div class="mdc-card p-0">
+    <h6 class="card-title card-padding pb-0">Dania</h6>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Kod)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nazwa)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cena)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Opis)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FotoURL)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Kod)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nazwa)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cena)
+                        </td>
+                        <td>
+                                @Html.Raw(item.Opis)
+                        </td>
+                        <td>
+                            @if (item.FotoURL != null)
+                            {
+                                <img src="data:image;base64,@Convert.ToBase64String(item.FotoURL)" alt="@item.FotoURL" class="img-thumbnail" style="max-width: 100px; max-height: 100px; background-color:transparent; border: none;" />
+                            }
+                        </td>
+                        <td>
+
+                            <button class="mdc-button mdc-button--unelevated filled-button--warning mdc-ripple-upgraded" style="--mdc-ripple-fg-size:55px; --mdc-ripple-fg-scale:1.98546; --mdc-ripple-fg-translate-start:26.5px, -4.5px; --mdc-ripple-fg-translate-end:18.7188px, -9.5px;">
+
+                                <i class="material-icons mdc-button__icon">colorize</i>
+                                <a asp-action="Edit" asp-route-id="@item.IdDania" class="mdc-button mdc-button--unelevated filled-button--warning mdc-ripple-upgraded">Edytuj</a>
+
+                            </button>
+
+                            <a asp-action="Details" asp-route-id="@item.IdDania" class="mdc-button mdc-button--unelevated filled-button--success mdc-ripple-upgraded">Szczegóły</a>
+
+                            <button class="mdc-button mdc-button--unelevated filled-button--secondary mdc-ripple-upgraded" style="--mdc-ripple-fg-size:65px; --mdc-ripple-fg-scale:1.92922; --mdc-ripple-fg-translate-start:22.5px, -15.5px; --mdc-ripple-fg-translate-end:22.3203px, -14.5px;">
+                                <i class="material-icons mdc-button__icon">delete</i>
+                                <a asp-action="Delete" asp-route-id="@item.IdDania" class="mdc-button mdc-button--unelevated filled-button--secondary mdc-ripple-upgraded">Delete</a>
+
+                            </button>
+
+
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+</div>

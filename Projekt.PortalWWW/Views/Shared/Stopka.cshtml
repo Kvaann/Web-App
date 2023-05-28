@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Projekt.Data.Data.CMS.Stopka>
+
+
+<!-- footer section -->
+<footer class="footer_section">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 footer-col">
+                    <div class="footer_contact">
+                        <h4>
+                            @item.Kontakt
+                        </h4>
+                        <div class="contact_link_box">
+                            <a href="">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span>
+                                    @item.Lokalizacja
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>
+                                    @item.NrTelefonu
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>
+                                    @item.AdresEmail
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <div class="footer_detail">
+                        <a href="" class="footer-logo">
+                            @item.Opis
+                        </a>
+                        <p>
+                            @item.Tresc
+                        </p>
+                        <div class="footer_social">
+                            <a href="">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-pinterest" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <h4>
+                        @item.GodzinyOtwarcia
+                    </h4>
+                    <p>
+                        @item.Godziny
+                    </p>
+
+                </div>
+            }
+        </div>
+        <div class="footer-info">
+            <p>
+                &copy; Projekt by Sebastian Arendarczyk
+            </p>
+        </div>
+    </div>
+</footer>
+<!-- footer section -->

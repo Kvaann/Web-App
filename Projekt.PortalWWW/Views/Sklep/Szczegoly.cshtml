@@ -1,0 +1,67 @@
+﻿@model Projekt.Data.Data.Sklep.Danie
+@{
+    ViewData["Title"] = "Szczegoly dania";
+    Layout = "~/Views/Shared/_SklepLayout.cshtml";
+}
+
+<!-- book section -->
+<section class="book_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>
+                Szczegóły
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form_container">
+                    <action ="">
+                        <div>
+                            <h2>Nazwa:</h2>
+                            <input type="text" class="form-control" value=@Model.Nazwa readonly />
+                        </div>
+                        <div>
+                            <h2>Cena:</h2>
+                            <input type="text" class="form-control" value=@Model.Cena readonly />
+                        </div>
+                        <div>
+                            <h2>Opis:</h2>
+                            <div class="form-control" readonly>
+                                @Html.Raw(Model.Opis)
+                            </div>
+                        </div>
+                        <div>
+                            <h2>Kod:</h2>
+                            <input type="text" class="form-control" value=@Model.Kod readonly />
+                        </div>
+
+                        <div class="btn_box">
+
+
+
+                            <div>
+                                <a asp-action="Index">
+                                    <button>
+                                        Wróć
+                                    </button>
+                                </a>
+                            </div>
+
+                        </div>
+                        </>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="map_container ">
+                    <div class="img-box">
+                        @if (Model.FotoURL != null)
+                        {
+                            <img src="data:image;base64,@Convert.ToBase64String(Model.FotoURL)" alt="@Model.FotoURL" />
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- end book section -->

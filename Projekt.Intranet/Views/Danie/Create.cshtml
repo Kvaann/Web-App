@@ -1,0 +1,107 @@
+﻿@model Projekt.Data.Data.Sklep.Danie
+
+@{
+    ViewData["Title"] = "Dodaj danie";
+}
+<style>
+    #container {
+        width: 200px;
+        margin: 100px auto;
+    }
+
+    .ck-editor__editable[role="textbox"] {
+        /* editing area */
+        min-height: 200px;
+    }
+
+    .ck-content .image {
+        /* block images */
+        max-width: 80%;
+        margin: 20px auto;
+    }
+</style>
+<h4>Dania</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+            
+            <form asp-action="Create" enctype="multipart/form-data">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mdc-text-field mdc-ripple-upgraded" style="--mdc-ripple-fg-size:219px; --mdc-ripple-fg-scale:1.73175; --mdc-ripple-fg-translate-start:179.5px, -87.5px; --mdc-ripple-fg-translate-end:73.75px, -87px;">
+                    <label asp-for="Kod" class="mdc-floating-label"></label>
+                    <input asp-for="Kod" class="mdc-text-field__input" />
+                    <span asp-validation-for="Kod" class="text-danger"></span>
+                </div>
+                <div class="mdc-text-field mdc-ripple-upgraded" style="--mdc-ripple-fg-size:219px; --mdc-ripple-fg-scale:1.73175; --mdc-ripple-fg-translate-start:179.5px, -87.5px; --mdc-ripple-fg-translate-end:73.75px, -87px;">
+                    <label asp-for="Nazwa" class="mdc-floating-label"></label>
+                    <input asp-for="Nazwa" class="mdc-text-field__input" />
+                    <span asp-validation-for="Nazwa" class="text-danger"></span>
+                </div>
+                <div class="mdc-text-field mdc-ripple-upgraded" style="--mdc-ripple-fg-size:219px; --mdc-ripple-fg-scale:1.73175; --mdc-ripple-fg-translate-start:179.5px, -87.5px; --mdc-ripple-fg-translate-end:73.75px, -87px;">
+                    <label asp-for="Cena" class="mdc-floating-label"></label>
+                    <input asp-for="Cena" class="mdc-text-field__input" />
+                    <span asp-validation-for="Cena" class="text-danger"></span>
+                </div>
+                
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FotoURL, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input type="file" name="file" id="file" />
+                    </div>
+                </div>
+
+                <div class="mdc-text-field mdc-ripple-upgraded" style="--mdc-ripple-fg-size:219px; --mdc-ripple-fg-scale:1.73175; --mdc-ripple-fg-translate-start:179.5px, -87.5px; --mdc-ripple-fg-translate-end:73.75px, -87px;">
+                    <label asp-for="KategoriaId" class="mdc-floating-label"></label>
+                    <input asp-for="KategoriaId" class="mdc-text-field__input" />
+                    <span asp-validation-for="KategoriaId" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="container" id="editor">
+                    <textarea id="opisEditor" asp-for="Opis" style="display: none;"></textarea>
+                    <span asp-validation-for="Opis" class="text-danger"></span>
+                </div>
+
+
+
+                <br />
+                <br />
+                <div>
+                    <button class="mdc-button mdc-button--raised icon-button filled-button--warning mdc-ripple-upgraded" style="--mdc-ripple-fg-size:21px; --mdc-ripple-fg-scale:2.90056; --mdc-ripple-fg-translate-start:21.625px, -1.5px; --mdc-ripple-fg-translate-end:7.5px, 7.5px;">
+                        <i class="material-icons mdc-button__icon" type="submit" value="Dodaj">add</i>
+                        Dodaj
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<br />
+
+<div>
+    <a asp-action="Index" class="mdc-button mdc-button--outlined outlined-button--dark mdc-ripple-upgraded" --mdc-ripple-fg-translate-end:14.3828px, -2.5px;">Powrót do listy</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+
+        <script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
+        <script>
+            ClassicEditor
+                .create(document.querySelector('#opisEditor'))
+                .catch(error => {
+                    console.error(error);
+                });
+
+        </script>
+    }
+
+
+        </script>
+
+
+}

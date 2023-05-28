@@ -1,0 +1,48 @@
+﻿@model Projekt.Data.Data.CMS.Strona
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Szczegóły</h1>
+
+<div>
+    <h4>Strona</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LinkTytulu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LinkTytulu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tytul)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tytul)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tresc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tresc)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pozycja)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pozycja)
+        </dd>
+    </dl>
+</div>
+<div>
+    <button class="mdc-button mdc-button--unelevated filled-button--warning mdc-ripple-upgraded" style="--mdc-ripple-fg-size:55px; --mdc-ripple-fg-scale:1.98546; --mdc-ripple-fg-translate-start:26.5px, -4.5px; --mdc-ripple-fg-translate-end:18.7188px, -9.5px;">
+    <i class="material-icons mdc-button__icon">colorize</i>
+    <a asp-action="Edit" asp-route-id="@Model?.IdStrony" class="mdc-button mdc-button--unelevated filled-button--warning mdc-ripple-upgraded">Edit</a>
+    </button>
+    <br />
+    <div>
+        <a asp-action="Index" class="mdc-button mdc-button--outlined outlined-button--dark mdc-ripple-upgraded" --mdc-ripple-fg-translate-end:14.3828px, -2.5px;">Powrót do listy</a>
+    </div>
+</div>
