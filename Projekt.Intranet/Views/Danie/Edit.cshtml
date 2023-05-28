@@ -43,9 +43,10 @@
                         <input type="file" name="file" id="file" />
                     </div>
                 </div>
-                <div class="mdc-text-field mdc-ripple-upgraded" style="--mdc-ripple-fg-size:219px; --mdc-ripple-fg-scale:1.73175; --mdc-ripple-fg-translate-start:179.5px, -87.5px; --mdc-ripple-fg-translate-end:73.75px, -87px;">
-                    <label asp-for="KategoriaId" class="mdc-floating-label"></label>
-                    <input asp-for="KategoriaId" class="mdc-text-field__input" />
+                <div class="form-group">
+                    <label asp-for="Kategoria" class="mdc-floating-label"></label>
+                    <br />
+                    <select asp-for="KategoriaId" asp-items="ViewBag.Kategoria" class="mdc-floating-label"></select>
                     <span asp-validation-for="KategoriaId" class="text-danger"></span>
                 </div>
                 <br />

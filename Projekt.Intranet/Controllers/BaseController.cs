@@ -4,7 +4,7 @@ using Projekt.Data.Data;
 namespace Projekt.Intranet.Controllers
 {
     //kontroler bazowy, z niego dziedziczą wszystkie kontrolery realizujace operacje elementarne CRUD
-    public class BaseController : Controller
+    public abstract class BaseController<TEntity> : Controller
     {
         // bedziemy go uzywac w kazdym kontrolerze, dlatego wskazuje jako protected, ew. mozna zastosowac property
         protected readonly ProjektContext _context;
@@ -14,9 +14,29 @@ namespace Projekt.Intranet.Controllers
             _context = context;
         }
 
-        public IActionResult Create()
+        public abstract Task<List<TEntity>> GetEntityList();
+
+        public virtual Task SetSelectList()
         {
-            return View();
+            return null;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            return View(await GetEntityList());
+        }
+
+        public async Task<IActionResult> Create()
+        {
+            await SetSelectList();
+            return View();  
+        }
+
+        public virtual async Task<IActionResult> Create(TEntity entity)
+        {
+            await _context.AddAsync(entity);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index");
         }
     }
 }

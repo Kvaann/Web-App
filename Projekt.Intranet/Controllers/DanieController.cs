@@ -3,10 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Projekt.Data.Data.Sklep;
 using Projekt.Data.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Projekt.Intranet.Controllers
 {
-    public class DanieController : BaseController
+    public class DanieController : BaseController<Danie>
     {
 
         public DanieController(ProjektContext context)
@@ -14,12 +15,15 @@ namespace Projekt.Intranet.Controllers
         {
         }
 
-        // GET: Danie
-        public async Task<IActionResult> Index()
+        public override async Task<List<Danie>> GetEntityList()
         {
-            return _context.Danie != null ?
-                        View(await _context.Danie.ToListAsync()) :
-                        Problem("Entity set 'ProjektContext.Danie'  is null.");
+            return await _context.Danie.Include(t => t.Kategoria).ToListAsync();
+        }
+
+        public override async Task SetSelectList()
+        {
+            var kategoria = await _context.Kategoria.ToListAsync();
+            ViewBag.Kategoria = new SelectList(kategoria, "IdKategorii", "Nazwa");
         }
 
         // GET: Danie/Details/5
@@ -45,7 +49,7 @@ namespace Projekt.Intranet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Danie danie)
+        public override async Task<IActionResult> Create(Danie danie)
         {
             var file = Request.Form.Files.FirstOrDefault();
             if (file != null && file.Length > 0)
@@ -68,6 +72,7 @@ namespace Projekt.Intranet.Controllers
         // GET: Danie/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            await SetSelectList();
             if (id == null || _context.Danie == null)
             {
                 return NotFound();

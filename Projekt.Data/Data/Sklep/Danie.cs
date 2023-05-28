@@ -25,6 +25,6 @@ namespace Projekt.Data.Data.Sklep
 
         //to jest realizacja klucza obcego
         public int KategoriaId { get; set; }
-        //public Kategoria Kategoria { get; set; }
+        public Kategoria Kategoria { get; set; }
     }
 }

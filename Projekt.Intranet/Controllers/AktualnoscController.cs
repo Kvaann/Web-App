@@ -2,15 +2,21 @@
 using Microsoft.EntityFrameworkCore;
 using Projekt.Data.Data;
 using Projekt.Data.Data.CMS;
+using Projekt.Data.Data.Sklep;
 
 namespace Projekt.Intranet.Controllers
 {
-    public class AktualnoscController : BaseController
+    public class AktualnoscController : BaseController<Aktualnosc>
     {
 
         public AktualnoscController(ProjektContext context)
             : base(context)
         {
+        }
+
+        public override async Task<List<Aktualnosc>> GetEntityList()
+        {
+            return await _context.Aktualnosc.Include(t => t.IdAktualnosci).ToListAsync();
         }
 
         // GET: Aktualnosc

@@ -5,7 +5,7 @@ using Projekt.Data.Data;
 
 namespace Projekt.Intranet.Controllers
 {
-    public class ONasController : BaseController
+    public class ONasController : BaseController<ONas>
     {
 
         public ONasController(ProjektContext context)
@@ -15,11 +15,9 @@ namespace Projekt.Intranet.Controllers
         }
 
         // GET: Onas
-        public async Task<IActionResult> Index()
+        public override async Task<List<ONas>> GetEntityList()
         {
-            return _context.ONas != null ?
-                        View(await _context.ONas.ToListAsync()) :
-                        Problem("Entity set 'ProjektContext.ONas'  is null.");
+            return await _context.ONas.Include(t => t.IdONas).ToListAsync();
         }
 
         // GET: Danie/Details/5
