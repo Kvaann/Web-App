@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/XPS/Desktop/Projekty/Projekt/Projektowanie aplikacji internetowych/Projekt/Projekt.PortalWWW/Views/Koszyk/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29zenlrXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/XPS/Desktop/Projekty/Projekt/Projektowanie aplikacji internetowych/Projekt/Projekt.PortalWWW/Views/Shared/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFib3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/XPS/Desktop/Projekty/Projekt/Projektowanie aplikacji internetowych/Projekt/Projekt.PortalWWW/Views/Shared/Stopka.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFN0b3BrYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/XPS/Desktop/Projekty/Projekt/Projektowanie aplikacji internetowych/Projekt/Projekt.PortalWWW/Views/Shared/_KoszykLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Lb3N6eWtMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/XPS/Desktop/Projekty/Projekt/Projektowanie aplikacji internetowych/Projekt/Projekt.PortalWWW/Views/Shared/_SklepLayout.cshtml]
