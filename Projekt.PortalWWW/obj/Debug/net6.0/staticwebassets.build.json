@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qMYt8gGrsLykpCU2ohkqLqIOC0Lbuo2tbRhdgutUh3I=",
+  "Hash": "k85KIvB+SYPW586zBEzWgV5iAooPrrx6Qy5i/SJOfT8=",
   "Source": "Projekt.PortalWWW",
   "BasePath": "_content/Projekt.PortalWWW",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Projekt.PortalWWW.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\css\\cart.css",
+      "SourceId": "Projekt.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Projekt.PortalWWW",
+      "RelativePath": "css/cart.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\cart.css"
     },
     {
       "Identity": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\css\\site.css",

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Projekt.PortalWWW.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\css\\cart.css",
+      "PackagePath": "staticwebassets\\css\\cart.css"
+    },
+    {
       "Id": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
