@@ -1,0 +1,57 @@
+﻿@model Projekt.Data.Data.Sklep.Promocja
+
+@{
+    ViewData["Title"] = "Dodaj stopke";
+}
+
+
+
+<h4>Stopka</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mdc-text-field mdc-ripple-upgraded" style="--mdc-ripple-fg-size:219px; --mdc-ripple-fg-scale:1.73175; --mdc-ripple-fg-translate-start:179.5px, -87.5px; --mdc-ripple-fg-translate-end:73.75px, -87px;">
+                    <label asp-for="Nazwa" class="mdc-floating-label"></label>
+                    <input asp-for="Nazwa" class="mdc-text-field__input" />
+                    <span asp-validation-for="Nazwa" class="text-danger"></span>
+                </div>
+                <div class="mdc-text-field mdc-ripple-upgraded" style="--mdc-ripple-fg-size:219px; --mdc-ripple-fg-scale:1.73175; --mdc-ripple-fg-translate-start:179.5px, -87.5px; --mdc-ripple-fg-translate-end:73.75px, -87px;">
+                    <label asp-for="Opis" class="mdc-floating-label"></label>
+                    <input asp-for="Opis" class="mdc-text-field__input" />
+                    <span asp-validation-for="Opis" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FotoURL, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input type="file" name="file" id="file" />
+                    </div>
+                </div>
+
+                <br />
+                <br />
+                <div>
+                    <button class="mdc-button mdc-button--raised icon-button filled-button--warning mdc-ripple-upgraded" style="--mdc-ripple-fg-size:21px; --mdc-ripple-fg-scale:2.90056; --mdc-ripple-fg-translate-start:21.625px, -1.5px; --mdc-ripple-fg-translate-end:7.5px, 7.5px;">
+                        <i class="material-icons mdc-button__icon" type="submit" value="Dodaj">add</i>
+                        Dodaj
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<br />
+
+<div>
+    <a asp-action="Index" class="mdc-button mdc-button--outlined outlined-button--dark mdc-ripple-upgraded" --mdc-ripple-fg-translate-end:14.3828px, -2.5px;">Powrót do listy</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

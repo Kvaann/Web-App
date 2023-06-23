@@ -12,7 +12,7 @@ namespace Projekt.Data.Data.Sklep
         [Required(ErrorMessage = "Opus jest wymagany")]
         [MaxLength(30, ErrorMessage = "Opis może zawierać max 30 znaków")] // maksymalna długość nazwy
         public string Opis { get; set; }
-        public string FotoURL { get; set; }
+        public byte[] FotoURL { get; set; }
         public bool CzyAktywna { get; set; }
     }
 }

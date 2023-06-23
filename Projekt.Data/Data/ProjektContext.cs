@@ -22,5 +22,6 @@ namespace Projekt.Data.Data
         public DbSet<Stopka> Stopka { get; set; }
         public DbSet<Slider> Slider { get; set; }
         public DbSet<Promocja> Promocja { get; set; }
+        public DbSet<ElementKoszyka> ElementKoszyka { get; set; }
     }
 }

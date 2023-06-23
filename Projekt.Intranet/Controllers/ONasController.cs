@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Projekt.Data.Data.CMS;
 using Projekt.Data.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Projekt.Intranet.Controllers
 {
@@ -18,6 +19,14 @@ namespace Projekt.Intranet.Controllers
         public override async Task<List<ONas>> GetEntityList()
         {
             return await _context.ONas.Include(t => t.IdONas).ToListAsync();
+        }
+
+        //GET: ONas
+        public override async Task<IActionResult> Index()
+        {
+            return _context.Aktualnosc != null ?
+                        View(await _context.ONas.ToListAsync()) :
+                        Problem("Entity set 'ProjektContext.Aktualnosc'  is null.");
         }
 
         // GET: Danie/Details/5

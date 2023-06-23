@@ -21,15 +21,23 @@ namespace Projekt.Intranet.Controllers
             return null;
         }
 
-        public async Task<IActionResult> Index()
+        public virtual async Task<IActionResult> Index()
         {
             return View(await GetEntityList());
         }
 
         public async Task<IActionResult> Create()
         {
-            await SetSelectList();
-            return View();  
+            if (SetSelectList() != null)
+            {
+                await SetSelectList();
+                return View();
+            }
+            else
+            {
+                return View();
+            }
+
         }
 
         public virtual async Task<IActionResult> Create(TEntity entity)

@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Projekt.Data.Data;
 using Projekt.Data.Data.CMS;
-using Projekt.Data.Data.Sklep;
 
 namespace Projekt.Intranet.Controllers
 {
@@ -20,11 +19,11 @@ namespace Projekt.Intranet.Controllers
         }
 
         // GET: Aktualnosc
-        public async Task<IActionResult> Index()
+        public override async Task<IActionResult> Index()
         {
-              return _context.Aktualnosc != null ? 
-                          View(await _context.Aktualnosc.ToListAsync()) :
-                          Problem("Entity set 'ProjektContext.Aktualnosc'  is null.");
+            return _context.Aktualnosc != null ?
+                        View(await _context.Aktualnosc.ToListAsync()) :
+                        Problem("Entity set 'ProjektContext.Aktualnosc'  is null.");
         }
 
         // GET: Aktualnosc/Details/5
