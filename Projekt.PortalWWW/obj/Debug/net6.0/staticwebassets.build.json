@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ccHojqaxoc5KMESmtphiQQ8C7SxJ5mnme87/fjy7gtY=",
+  "Hash": "QG9kqmFIqbzXDUu5uOpGUdbk+J9ZJ383oRv0k7Ps5zY=",
   "Source": "Projekt.PortalWWW",
   "BasePath": "_content/Projekt.PortalWWW",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Projekt.PortalWWW.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\css\\app.js",
+      "Identity": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\app.js",
       "SourceId": "Projekt.PortalWWW",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\",
       "BasePath": "_content/Projekt.PortalWWW",
-      "RelativePath": "css/app.js",
+      "RelativePath": "app.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,7 +65,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\app.js"
+      "OriginalItemSpec": "wwwroot\\app.js"
     },
     {
       "Identity": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\css\\cart.css",

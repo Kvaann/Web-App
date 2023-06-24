@@ -4,62 +4,70 @@
     ViewData["Title"] = "Koszyk";
     Layout = "~/Views/Shared/_KoszykLayout.cshtml";
 }
+<head>
     <link rel="stylesheet" type="text/css" href="~/css/cart.css" />
 
+
+            </head>
 <body class="">
-    
     <div class="container">
+                   
         <header>
-            <h1>Your Shopping Cart</h1>
-     
+            <a href="Sklep/Index"> <h1>Powrót</h1></a>            <br />
+            <br />
+
+            <h1>Koszyk</h1>
+
+            <div class="shopping">
+                <img src="~/css/shopping.svg">
+                <span class="quantity">@Model.ElementyKoszyka.Count</span>
+            </div>
+
         </header>
 
         <div class="list">
-                      <div class="shopping">
                 @foreach (var item in Model.ElementyKoszyka)
                 {
-                            <div class="col-sm-6 col-lg-4 all pizza">
-                                <div class="box">
-                                    <div>
-                                        <div class="img-box">
-                                    @if (item.Danie.FotoURL != null)
-                                    {
-                                                        <img src="data:image;base64,@Convert.ToBase64String(item.Danie.FotoURL)" alt="@item.Danie.FotoURL" />
-                                    }
-                                        </div>
-
-                                        <div class="detail-box">
-                                    @*Nazwa*@
-                                            <h5>
-                                        @Html.ActionLink(item.Danie.Nazwa, "Szczegoly", "Sklep", new { id = item.IdDania }, null)
-                                            </h5>
-                                    @*Opis*@
-                                            <p>
-                                        @Html.Raw(item.Danie.Opis)
-                                            </p>
-                                    @*Opcje - cena*@
-                                            <div class="options">
-                                                <h6>
-                                            @String.Format("{0:F}",item.Danie.Cena) zł
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                }  
+            <div class="item" @item.Danie.Nazwa>
+            @if (item.Danie.FotoURL != null)
+            {
+                <img src="data:image;base64,@Convert.ToBase64String(item.Danie.FotoURL)" alt="@item.Danie.FotoURL" />
+            }
+            <div class="title">@Html.Raw(item.Danie.Nazwa)</div>
+            <div class="price">@String.Format("{0:F}",item.Danie.Cena) zł</div>
         </div>
+        }       
+        
     </div>
+    </div>
+
     <div class="card">
         <h1>Card</h1>
         <ul class="listCard">
+            <li>
+                @foreach (var item in Model.ElementyKoszyka)
+                {
+                    <div class="item" @item.Danie.Nazwa></div>
+                        @if (item.Danie.FotoURL != null)
+                        {
+                                                                <img src="data:image;base64,@Convert.ToBase64String(item.Danie.FotoURL)" alt="@item.Danie.FotoURL" />
+                        }
+                <div>@Html.Raw(item.Danie.Nazwa)</div>
+                <div>@String.Format("{0:F}",item.Danie.Cena)</div>
+                }
+                </li>
+        
         </ul>
+
         <div class="checkOut">
-            <div class="total">0</div>
-            <div class="closeShopping">Close</div>
+            <div class="total">Wartość koszyka @String.Format("{0:F}",Model.Razem)</div>
+            <div class="closeShopping">Zamknij</div>
         </div>
     </div>
+    
 
-    <script src="~\css\app.js"></script>
+
+
+    <script src="/app.js"></script>
 </body>
 </html>

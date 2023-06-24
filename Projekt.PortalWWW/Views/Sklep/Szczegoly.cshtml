@@ -22,7 +22,7 @@
                         </div>
                         <div>
                             <h2>Cena:</h2>
-                            <input type="text" class="form-control" value=@Model.Cena readonly />
+                            <input type="text" class="form-control" value=@String.Format("{0:F}",Model.Cena)zł readonly />
                         </div>
                         <div>
                             <h2>Opis:</h2>
@@ -51,7 +51,10 @@
 
                         </div>
                         <div class="filters-content">
-                            <a asp-action="DodajDoKoszyka" asp-controller="Koszyk" asp-route-id="@Model.IdDania">Dodaj do koszyka</a>
+                            <button>
+                                Dodaj do koszyka
+                            <a asp-action="DodajDoKoszyka" asp-controller="Koszyk" asp-route-id="@Model.IdDania"></a>
+                        </button>
                         </div>
                         </>
                 </div>
