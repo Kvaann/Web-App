@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "k85KIvB+SYPW586zBEzWgV5iAooPrrx6Qy5i/SJOfT8=",
+  "Hash": "ccHojqaxoc5KMESmtphiQQ8C7SxJ5mnme87/fjy7gtY=",
   "Source": "Projekt.PortalWWW",
   "BasePath": "_content/Projekt.PortalWWW",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Projekt.PortalWWW.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\css\\app.js",
+      "SourceId": "Projekt.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Projekt.PortalWWW",
+      "RelativePath": "css/app.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\app.js"
+    },
+    {
       "Identity": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\css\\cart.css",
       "SourceId": "Projekt.PortalWWW",
       "SourceType": "Discovered",
@@ -66,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\cart.css"
+    },
+    {
+      "Identity": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\css\\shopping.svg",
+      "SourceId": "Projekt.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Projekt.PortalWWW",
+      "RelativePath": "css/shopping.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\shopping.svg"
     },
     {
       "Identity": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\css\\site.css",
@@ -661,6 +695,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\lib\\bootstrap\\dist\\css\\carousel.css",
+      "SourceId": "Projekt.PortalWWW",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\",
+      "BasePath": "_content/Projekt.PortalWWW",
+      "RelativePath": "lib/bootstrap/dist/css/carousel.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\carousel.css"
     },
     {
       "Identity": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\lib\\bootstrap\\dist\\css\\font-awesome.min.css",

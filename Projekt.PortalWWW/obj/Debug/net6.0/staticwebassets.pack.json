@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\Projekt.PortalWWW.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\css\\app.js",
+      "PackagePath": "staticwebassets\\css\\app.js"
+    },
+    {
       "Id": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\css\\cart.css",
       "PackagePath": "staticwebassets\\css\\cart.css"
+    },
+    {
+      "Id": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\css\\shopping.svg",
+      "PackagePath": "staticwebassets\\css\\shopping.svg"
     },
     {
       "Id": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\css\\site.css",
@@ -151,6 +159,10 @@
     {
       "Id": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\lib\\bootstrap\\dist\\css\\carousel.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\carousel.css"
     },
     {
       "Id": "C:\\Users\\XPS\\Desktop\\Projekty\\Projekt\\Projektowanie aplikacji internetowych\\Projekt\\Projekt.PortalWWW\\wwwroot\\lib\\bootstrap\\dist\\css\\font-awesome.min.css",

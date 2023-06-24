@@ -11,7 +11,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="shortcut icon" href="images/favicon.png" type="">
+    <link rel="shortcut icon" href="~/lib/bootstrap/dist/images/favicon.png" type="">
 
     <title> Projekt Arendarczyk Sebastian </title>
 
@@ -20,6 +20,7 @@
 
     <!--owl slider stylesheet -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
     <!-- nice select  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
     <!-- font awesome style -->
@@ -35,12 +36,12 @@
 <body>
 
     @await Html.PartialAsync("Odnosniki",(IEnumerable<Projekt.Data.Data.CMS.Strona>) ViewBag.ModelStrony)
+    @await Html.PartialAsync("Offer",(IEnumerable<Projekt.Data.Data.Sklep.Promocja>) ViewBag.Promocja)
+    @await Html.PartialAsync("About",(IEnumerable<Projekt.Data.Data.CMS.ONas>) ViewBag.ONas)
 
 
 
     @RenderBody()
-    @await Html.PartialAsync("Offer",(IEnumerable<Projekt.Data.Data.Sklep.Promocja>) ViewBag.Promocja)
-    @await Html.PartialAsync("About",(IEnumerable<Projekt.Data.Data.CMS.ONas>) ViewBag.ONas)
 
     @await Html.PartialAsync("Stopka",(IEnumerable<Projekt.Data.Data.CMS.Stopka>) ViewBag.Stopka)
 
